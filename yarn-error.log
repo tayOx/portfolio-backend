@@ -1,0 +1,49 @@
+Arguments: 
+  /snap/node/5770/bin/node /snap/node/5770/bin/yarn.js add cors
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.2
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)
+
+npm manifest: 
+  {
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+      "start": "nodemon app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "axios": "^0.25.0",
+      "body-parser": "^1.19.1",
+      "cors": "^2.8.5",
+      "dotenv": "^14.3.2",
+      "express": "^4.17.2",
+      "mysql2": "^2.3.3",
+      "nodemon": "^2.0.15",
+      "request-promise": "^4.2.6",
+      "sequelize": "^6.15.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
