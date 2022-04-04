@@ -6,7 +6,7 @@ const rp = require("request-promise");
 const bodyParser = require('body-parser');
 const { rastrearEncomendas } = require('correios-brasil');
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT);
 app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
