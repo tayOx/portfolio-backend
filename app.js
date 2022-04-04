@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.post('/api', (req, res) => {
-
+    console.log("oi")
     var query = req.body.codigo
     console.log(query)
 
