@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.25.0",
     "body-parser": "^1.19.1",
+    "correios-brasil": "^2.2.2",
     "cors": "^2.8.5",
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
