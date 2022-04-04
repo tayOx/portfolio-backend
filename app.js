@@ -14,7 +14,7 @@ const corsOptions = {
     "allowedHeaders": ["Content-Type"]
   }
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 3000);
 app.use(cors(corsOptions))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
