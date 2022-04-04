@@ -6,16 +6,9 @@ const rp = require("request-promise");
 const bodyParser = require('body-parser');
 const { rastrearEncomendas } = require('correios-brasil');
 
-const corsOptions = {
-    "origin": "*",
-    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-    "preflightContinue": false,
-    "optionsSuccessStatus": 204,
-    "allowedHeaders": ["Content-Type"]
-  }
 
 app.listen(process.env.PORT || 3000);
-app.use(cors(corsOptions))
+app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
