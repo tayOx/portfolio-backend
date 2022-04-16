@@ -5,6 +5,7 @@ const cors = require ("cors")
 const rp = require("request-promise");
 const bodyParser = require('body-parser');
 const { rastrearEncomendas } = require('correios-brasil');
+const { default: axios } = require('axios');
 
 
 var PORT = process.env.PORT || 8080
@@ -17,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
-app.post('/api', (req, res) => {
+app.post('/correios', (req, res) => {
     console.log("oi")
     var query = req.body.codigo
     console.log(query)
@@ -29,4 +30,18 @@ app.post('/api', (req, res) => {
         })
     
   });
+
+app.post('/ip', (req, res) => {
+console.log("oi")
+var query = req.body.ip
+console.log(query)
+axios({
+
+    method: "get",
+    url: "http://ip-api.com/json/"+query+"?fields=17982485",
+    responseType: "json"
+
+}).then((data) => data = res.send(data));
+
+});
 
